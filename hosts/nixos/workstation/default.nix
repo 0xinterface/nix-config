@@ -1,10 +1,9 @@
 { config, lib, hostname, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -33,7 +32,10 @@
   #   pulse.enable = true;
   # };
 
-  # programs.firefox.enable = true;
+  programs.hyprland = { 
+    enable = true;
+    xwayland.enable = true;
+  };
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).

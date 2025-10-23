@@ -8,7 +8,13 @@ in
   system.stateVersion = stateVersion;
 
   services = {
-    openssh.enable = true;
+    openssh = {
+      enable = true;
+      settings = {
+        PermitRootLogin = "no";
+        PasswordAuthentication = false;
+      };
+    };
     tailscale.enable = true;
   };
 

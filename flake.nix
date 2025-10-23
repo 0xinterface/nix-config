@@ -47,6 +47,7 @@
         "oblivion"
       ];
       nixosHosts = [
+        "luna"
         "workstation"
       ];
       libx = import ./lib { inherit inputs outputs stateVersion; };

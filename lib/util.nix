@@ -45,6 +45,7 @@
     inputs.nixpkgs.lib.nixosSystem {
       modules = [
         ../hosts/common/nixos.nix
+        ../hosts/common/packages.nix
         ../hosts/nixos/${hostname}/default.nix
         inputs.home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;

@@ -14,8 +14,8 @@
   '';
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  
-  users.user.admin.shell = pkgs.fish;
+
+  users.users.admin.shell = pkgs.fish;
 
   networking = {
     hostName = hostname;

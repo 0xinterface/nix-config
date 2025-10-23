@@ -32,7 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    authorized-keys = {
+    ssh-keys = {
       url = "https://github.com/0xinterface.keys";
       flake = false;
     };
@@ -47,8 +47,7 @@
         "oblivion"
       ];
       nixosHosts = [
-        "mercury"
-        "neptune"
+        "workstation"
       ];
       libx = import ./lib { inherit inputs outputs stateVersion; };
     in {
@@ -69,17 +68,21 @@
         }) nixosHosts
       );
 
-      deploy.nodes = {
-        # nix run github:serokell/deploy-rs -- ".#neptune.system"
-        neptune = {
-          hostname = "neptune";
-          profiles.system = {
+      # nix run github:serokell/deploy-rs -- ".#{hostname}.system"
+      deploy.nodes = builtins.listToAttrs (
+        builtins.map (hostname: {
+          name = hostname;
+          value = {
+            hostname = hostname;
             sshUser = "admin";
-            user = "root";
+            remoteBuild = true;
             interactiveSudo = true;
-            path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.neptune;
+            profiles.system = {
+              user = "root";
+              path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.${hostname};
+            };
           };
-        };
-      };
+        }) nixosHosts
+      );
     };
 }

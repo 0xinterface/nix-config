@@ -44,6 +44,7 @@
   in
     inputs.nixpkgs.lib.nixosSystem {
       modules = [
+        ../hosts/common/nixos.nix
         ../hosts/nixos/${hostname}/default.nix
         inputs.home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -53,7 +54,7 @@
           home-manager.users.${username} = { imports = [ ./../home/${username}.nix ]; };
         }
       ];
-      specialArgs = { inherit inputs outputs system username stateVersion; };
+      specialArgs = { inherit inputs outputs system hostname username stateVersion; };
     };
 
 }

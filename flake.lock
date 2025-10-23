@@ -1,17 +1,5 @@
 {
   "nodes": {
-    "authorized-keys": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-XArp3rB7lBR6ZStIK/QKmC3dA/nEguF70sthys50BNc=",
-        "type": "file",
-        "url": "https://github.com/0xinterface.keys"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/0xinterface.keys"
-      }
-    },
     "brew-src": {
       "flake": false,
       "locked": {
@@ -226,7 +214,6 @@
     },
     "root": {
       "inputs": {
-        "authorized-keys": "authorized-keys",
         "darwin": "darwin",
         "deploy-rs": "deploy-rs",
         "disko": "disko",
@@ -236,7 +223,8 @@
         "homebrew-core": "homebrew-core",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_2",
-        "sops-nix": "sops-nix"
+        "sops-nix": "sops-nix",
+        "ssh-keys": "ssh-keys"
       }
     },
     "sops-nix": {
@@ -257,6 +245,18 @@
         "owner": "Mic92",
         "repo": "sops-nix",
         "type": "github"
+      }
+    },
+    "ssh-keys": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-XArp3rB7lBR6ZStIK/QKmC3dA/nEguF70sthys50BNc=",
+        "type": "file",
+        "url": "https://github.com/0xinterface.keys"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/0xinterface.keys"
       }
     },
     "systems": {

@@ -7,3 +7,4 @@ macos-secure-input-indication = true
 theme = Rose Pine
 window-height = 33
 window-width = 125
+shell-integration-features = ssh-terminfo,ssh-env

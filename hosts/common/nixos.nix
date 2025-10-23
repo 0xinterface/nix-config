@@ -1,10 +1,16 @@
 { pkgs, lib, inputs, stateVersion, ... }:
 let
-  inherit (inputs) nixpkgs;
+  inherit (inputs) nixpkgs ssh-keys;
 in
 {
   time.timeZone = "Asia/Hong_Kong";
+  i18n.defaultLocale = "en_US.UTF-8";
   system.stateVersion = stateVersion;
+
+  services = {
+    openssh.enable = true;
+    tailscale.enable = true;
+  };
 
   virtualisation = {
     docker = {
@@ -18,8 +24,9 @@ in
 
   nix = {
     settings = {
-        experimental-features = [ "nix-command" "flakes" ];
-        warn-dirty = false;
+      experimental-features = [ "nix-command" "flakes" ];
+      trusted-users = [ "admin" "root" ];
+      warn-dirty = false;
     };
     # Automate garbage collection
     gc = {
@@ -30,6 +37,12 @@ in
   };
 
   programs.fish.enable = true;
+
+  users.users.admin = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    openssh.authorizedKeys.keyFiles = [ ssh-keys.outPath ];
+  };
 
   # environment.systemPackages = with pkgs; [
   #   #

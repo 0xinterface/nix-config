@@ -5,10 +5,10 @@
   ...
 }:
 let
-  helpers = import ./util.nix { inherit inputs outputs stateVersion; };
+  util = import ./util.nix { inherit inputs outputs stateVersion; };
 in
 {
-  inherit (helpers)
+  inherit (util)
     mkDarwin
     mkNixOS
     ;

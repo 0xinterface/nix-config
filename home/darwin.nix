@@ -15,6 +15,7 @@
       window-width = 125;
       macos-auto-secure-input = true;
       macos-secure-input-indication = true;
+      shell-integration-features = "ssh-terminfo,ssh-env";
       theme = "Rose Pine";
     };
   };

@@ -34,7 +34,7 @@ in
     eza
     tree
     terraform
-    du-dust # better du alternative
+    dust # better du alternative
     ripgrep
     # zbar
     jq

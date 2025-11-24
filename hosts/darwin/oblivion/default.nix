@@ -17,9 +17,13 @@
     protoc-gen-go
     protobuf
     pnpm
+    yt-dlp
   ];
 
   homebrew = {
+    brews = [
+      "incus"
+    ];
     casks = [
       "audio-hijack"
       "discord"

@@ -1,4 +1,41 @@
-format = "[╭╴](fg:238)[█](fg:#3D348B)[█](fg:#5145BA)[█](fg:#7678ED)$os[█](bg:#DA627D fg:#7678ED)$directory[](fg:#DA627D bg:#FCA17D)$git_branch$git_status[](fg:#FCA17D bg:#86BBD8)$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala[](fg:#86BBD8 bg:#06969A)$docker_context[](fg:#06969A bg:#33658A)[ ](fg:#33658A)$fill$time[█](fg:#292929)[█](fg:#333333)[█](fg:#3d3d3d)[─╮ ](fg:238)$line_break[╰╴](fg:238)$character"
+format = """
+[╭╴](fg:238)\
+[█](fg:#3D348B)\
+[█](fg:#5145BA)\
+[█](fg:#7678ED)\
+$os\
+[█](bg:#DA627D fg:#7678ED)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+[](fg:#86BBD8 bg:#06969A)\
+$docker_context\
+[](fg:#06969A bg:#33658A)\
+[ ](fg:#33658A)\
+$fill\
+$time\
+[█](fg:#292929)\
+[█](fg:#333333)\
+[█](fg:#3d3d3d)\
+[─╮ ](fg:238)\
+$line_break\
+[╰╴](fg:238)\
+$character\
+"""
 right_format = "[─╯](fg:238) "
 [c]
 format = "[ $symbol ($version) ]($style)"

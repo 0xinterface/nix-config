@@ -9,6 +9,8 @@
     '';
     interactiveShellInit = ''
       set fish_greeting
+      set -x GOPATH (go env GOPATH)
+      set -x PATH $PATH (go env GOPATH)/bin
       function read-sops-keys
         set -Ux SOPS_AGE_RECIPIENTS (op read "op://Infrastructure/SOPS/age/public key")
         set -Ux SOPS_AGE_KEY (op read "op://Infrastructure/SOPS/password")

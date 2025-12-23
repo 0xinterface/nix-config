@@ -32,7 +32,6 @@
       "little-snitch"
       "loopback"
       "raycast"
-      "signal"
       "zen"
       "jordanbaird-ice"
       "visual-studio-code"

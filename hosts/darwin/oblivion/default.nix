@@ -25,7 +25,9 @@
       "incus"
     ];
     casks = [
+      "altserver"
       "audio-hijack"
+      "camo-studio"
       "discord"
       "figma"
       "google-chrome@dev"
@@ -37,6 +39,7 @@
       "visual-studio-code"
       "tableplus"
       "rapidapi"
+      "reflector"
       "pixelsnap"
       "utm"
       "xscope"

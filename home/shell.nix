@@ -6,6 +6,9 @@
       if test -d /opt/homebrew
         /opt/homebrew/bin/brew shellenv | source
       end
+      if test -d /Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data 
+        set -x SSH_AUTH_SOCK /Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+      end
     '';
     interactiveShellInit = ''
       set fish_greeting

@@ -51,6 +51,8 @@ in
     dock.wvous-br-corner = 1;
     dock.wvous-tl-corner = 1;
     dock.wvous-tr-corner = 1;
+    dock.show-recents = false;
+    dock.persistent-others = [];
     menuExtraClock.Show24Hour = true;
     menuExtraClock.ShowAMPM = false;
     menuExtraClock.ShowDate = 2;

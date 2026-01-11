@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  ids.gids.nixbld = 30000;
+  ids.gids.nixbld = 350;
   system.defaults.dock = {
     persistent-apps = [
       "/Applications/Fantastical.app"
@@ -9,7 +9,6 @@
       "/Applications/Ivory.app"
       "/Applications/Prompt.app"
       "/Applications/Ghostty.app"
-      "/Applications/Zen.app"
     ];
   };
 
@@ -26,6 +25,7 @@
       "jordanbaird-ice"
       "little-snitch"
       "raycast"
+      "secretive"
       "zed"
     ];
 

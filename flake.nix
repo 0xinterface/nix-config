@@ -44,6 +44,7 @@
       inherit (self) outputs;
       stateVersion = "25.05";
       darwinHosts = [
+        "anemoi"
         "oblivion"
       ];
       nixosHosts = [

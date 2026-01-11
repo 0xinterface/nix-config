@@ -53,7 +53,7 @@
       ];
       libx = import ./lib { inherit inputs outputs stateVersion; };
     in {
-      # nix build .#darwinConfigurations.${hostname}.system
+      # nix build --extra-experimental-features 'nix-command flakes' .#darwinConfigurations.${hostname}.system
       # ./result/sw/bin/darwin-rebuild switch --flake .
       darwinConfigurations = builtins.listToAttrs (
         builtins.map (hostname: {

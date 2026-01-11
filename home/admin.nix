@@ -26,6 +26,7 @@
       enableDefaultConfig = false;
       matchBlocks = {
         "*" = {
+	  identityAgent = "/Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
           forwardAgent = false;
           addKeysToAgent = "no";
           compression = false;

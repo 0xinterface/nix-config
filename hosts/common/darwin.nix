@@ -53,6 +53,8 @@ in
     dock.wvous-tr-corner = 1;
     dock.show-recents = false;
     dock.persistent-others = [];
+    dock.orientation = "right";
+    dock.tilesize = 44;
     menuExtraClock.Show24Hour = true;
     menuExtraClock.ShowAMPM = false;
     menuExtraClock.ShowDate = 2;

@@ -5,7 +5,7 @@
     persistent-apps = [
       "/Applications/Fantastical.app"
       "/Applications/Things3.app"
-      "/Applications/Safari.app"
+      "/Applications/Helium.app"
       "/Applications/Ivory.app"
       "/Applications/Prompt.app"
       "/Applications/Ghostty.app"

@@ -14,11 +14,14 @@
 
   environment.systemPackages = with pkgs; [
     mas
+    bun
+    mosh
   ];
 
   homebrew = {
     brews = [
       "incus"
+      "opencode"
     ];
     casks = [
       "helium-browser"
@@ -26,6 +29,7 @@
       "little-snitch"
       "raycast"
       "secretive"
+      "tableplus"
       "zed"
     ];
 

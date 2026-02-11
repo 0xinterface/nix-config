@@ -18,6 +18,7 @@
     protobuf
     pnpm
     yt-dlp
+    bun
   ];
 
   homebrew = {
@@ -31,6 +32,7 @@
       "discord"
       "figma"
       "google-chrome@dev"
+      "helium-browser"
       "little-snitch"
       "loopback"
       "raycast"

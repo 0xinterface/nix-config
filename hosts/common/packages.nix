@@ -25,7 +25,7 @@ in
     btop
     ansible
     gping
-    neofetch # fancy system + hardware info
+    fastfetch # fancy system + hardware info
     iperf
     sops
     vault

@@ -7,7 +7,6 @@
       "/Applications/Things3.app"
       "/Applications/Safari.app"
       "/Applications/Ivory.app"
-      "/Applications/Prompt.app"
       "/Applications/Ghostty.app"
       "/Applications/Zen.app"
     ];
@@ -22,6 +21,10 @@
   ];
 
   homebrew = {
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+    };
     brews = [
       "incus"
     ];
@@ -38,6 +41,7 @@
       "raycast"
       "zen"
       "jordanbaird-ice"
+      "mos"
       "visual-studio-code"
       "tableplus"
       "rapidapi"

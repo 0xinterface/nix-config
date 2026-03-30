@@ -27,6 +27,7 @@
     };
     brews = [
       "incus"
+      "talosctl"
     ];
     casks = [
       "altserver"

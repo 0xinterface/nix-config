@@ -7,15 +7,19 @@
       "/Applications/Things3.app"
       "/Applications/Helium.app"
       "/Applications/Ivory.app"
-      "/Applications/Prompt.app"
       "/Applications/Ghostty.app"
     ];
   };
 
   environment.systemPackages = with pkgs; [
-    mas
     bun
+    kubecolor
+    kubectl
+    mas
     mosh
+    nixd
+    nil
+    talosctl
   ];
 
   homebrew = {
@@ -24,6 +28,7 @@
       "opencode"
     ];
     casks = [
+      "discord"
       "helium-browser"
       "jordanbaird-ice"
       "little-snitch"

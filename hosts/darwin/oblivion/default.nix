@@ -47,6 +47,7 @@
       "tableplus"
       "rapidapi"
       "reflector"
+      "secretive"
       "pixelsnap"
       "utm"
       "xscope"

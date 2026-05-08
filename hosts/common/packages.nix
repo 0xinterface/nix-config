@@ -66,5 +66,7 @@ in
     lm_sensors
     iputils
     libuuid # `uuidgen` (already pre-installed on mac)
+  ] ++ lib.optionals stdenv.isDarwin [
+    iproute2mac
   ];
 }

@@ -25,13 +25,14 @@
   homebrew = {
     brews = [
       "incus"
-      "opencode"
     ];
     casks = [
+      "airbuddy"
       "discord"
       "helium-browser"
       "jordanbaird-ice"
       "little-snitch"
+      "mullvad-vpn"
       "raycast"
       "secretive"
       "tableplus"

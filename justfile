@@ -74,7 +74,7 @@ deploy *args:
     exec sudo darwin-rebuild switch --flake ".#${hostname}"
   elif [ "$boot" = true ]; then
     exec nix run nixpkgs#nixos-rebuild -- \
-      --fast \
+      --no-reexec \
       --flake ".#${hostname}" \
       --target-host "${user}@${target}" \
       --build-host "${user}@${target}" \

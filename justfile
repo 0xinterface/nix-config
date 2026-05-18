@@ -78,7 +78,8 @@ deploy *args:
       --flake ".#${hostname}" \
       --target-host "${user}@${target}" \
       --build-host "${user}@${target}" \
-      --use-remote-sudo \
+      --sudo \
+      --ask-sudo-password \
       boot
   else
     exec nix run github:serokell/deploy-rs -- "#${hostname}.system"

@@ -47,19 +47,23 @@ in
 
   security.pam.services.sudo_local.touchIdAuth = true;
   system.defaults = {
-    dock.wvous-bl-corner = 1;
-    dock.wvous-br-corner = 1;
-    dock.wvous-tl-corner = 1;
-    dock.wvous-tr-corner = 1;
-    dock.show-recents = false;
-    dock.persistent-others = [];
-    dock.orientation = "right";
-    dock.tilesize = 44;
-    menuExtraClock.Show24Hour = true;
-    menuExtraClock.ShowAMPM = false;
-    menuExtraClock.ShowDate = 2;
-    menuExtraClock.ShowDayOfWeek = false;
-    menuExtraClock.ShowDayOfMonth = false;
+    dock = {
+      wvous-bl-corner = 1;
+      wvous-br-corner = 1;
+      wvous-tl-corner = 1;
+      wvous-tr-corner = 1;
+      show-recents = false;
+      persistent-others = [];
+      orientation = "right";
+      tilesize = 44;
+    };
+    menuExtraClock = {
+      Show24Hour = true;
+      ShowAMPM = false;
+      ShowDate = 2;
+      ShowDayOfWeek = false;
+      ShowDayOfMonth = false;
+    };
     NSGlobalDomain.AppleShowAllExtensions = true;
     NSGlobalDomain.AppleTemperatureUnit = "Celsius";
     NSGlobalDomain.InitialKeyRepeat = 10;
@@ -72,7 +76,9 @@ in
     NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
     NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
     WindowManager.EnableStandardClickToShowDesktop = false;
-    trackpad.TrackpadThreeFingerDrag = true;
-    trackpad.Clicking = true;
+    trackpad = {
+      TrackpadThreeFingerDrag = true;
+      Clicking = true;
+    };
   };
 }

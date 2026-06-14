@@ -18,6 +18,7 @@
     pnpm
     yt-dlp
     bun
+    ffmpeg
   ];
 
   homebrew = {
@@ -25,29 +26,21 @@
       autoUpdate = true;
       upgrade = true;
     };
-    brews = [
-      "incus"
-      "talosctl"
-    ];
     casks = [
       "altserver"
       "audio-hijack"
       "camo-studio"
       "discord"
       "figma"
-      "google-chrome@dev"
       "helium-browser"
       "little-snitch"
       "loopback"
       "raycast"
-      "zen"
-      "jordanbaird-ice"
       "mos"
       "visual-studio-code"
       "tableplus"
       "rapidapi"
       "reflector"
-      "secretive"
       "pixelsnap"
       "utm"
       "xscope"

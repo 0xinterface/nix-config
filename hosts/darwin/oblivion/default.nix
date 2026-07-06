@@ -27,7 +27,6 @@
       upgrade = true;
     };
     casks = [
-      "altserver"
       "audio-hijack"
       "camo-studio"
       "discord"

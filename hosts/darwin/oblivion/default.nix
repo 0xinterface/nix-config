@@ -8,7 +8,6 @@
       "/Applications/Safari.app"
       "/Applications/Ivory.app"
       "/Applications/Ghostty.app"
-      "/Applications/Zen.app"
     ];
   };
 

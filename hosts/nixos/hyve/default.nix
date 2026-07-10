@@ -46,51 +46,51 @@
     };
   };
 
-  # virtualisation.incus.preseed = {
-  #   networks = [
-  #     {
-  #       config = {
-  #         "ipv4.address" = "192.168.64.254/24";
-  #         "ipv4.dhcp" = "true";
-  #         "ipv4.dhcp.ranges" = "192.168.64.1-192.168.64.249";
-  #         "ipv4.nat" = "true";
-  #       };
-  #       name = "ixbr0";
-  #       type = "bridge";
-  #     }
-  #   ];
-  #   storage_pools = [
-  #     {
-  #       name = "standard";
-  #       driver = "lvm";
-  #       config = {
-  #         source = "standard";
-  #       };
-  #     }
-  #     {
-  #       name = "vmpool";
-  #       driver = "lvm";
-  #       config = {
-  #         source = "vmpool";
-  #       };
-  #     }
-  #   ];
-  #   profiles = [
-  #     {
-  #       name = "default";
-  #       devices = {
-  #         eth0 = {
-  #           type = "nic";
-  #           network = "ixbr0";
-  #         };
-  #         root = {
-  #           type = "disk";
-  #           path = "/";
-  #           pool = "standard";
-  #           size = "32GiB";
-  #         };
-  #       };
-  #     }
-  #   ];
-  # };
+  virtualisation.incus.preseed = {
+    networks = [
+      {
+        config = {
+          "ipv4.address" = "192.168.64.254/24";
+          "ipv4.dhcp" = "true";
+          "ipv4.dhcp.ranges" = "192.168.64.1-192.168.64.249";
+          "ipv4.nat" = "true";
+        };
+        name = "ixbr0";
+        type = "bridge";
+      }
+    ];
+    storage_pools = [
+      {
+        name = "standard";
+        driver = "lvm";
+        config = {
+          source = "standard";
+        };
+      }
+      {
+        name = "vmpool";
+        driver = "lvm";
+        config = {
+          source = "vmpool";
+        };
+      }
+    ];
+    profiles = [
+      {
+        name = "default";
+        devices = {
+          eth0 = {
+            type = "nic";
+            network = "ixbr0";
+          };
+          root = {
+            type = "disk";
+            path = "/";
+            pool = "standard";
+            size = "32GiB";
+          };
+        };
+      }
+    ];
+  };
 }

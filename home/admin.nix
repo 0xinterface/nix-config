@@ -24,7 +24,7 @@
     ssh = {
       enable = true;
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings = {
         "*" = {
 	  identityAgent = "/Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
           forwardAgent = false;

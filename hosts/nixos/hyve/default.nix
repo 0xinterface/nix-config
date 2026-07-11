@@ -12,7 +12,10 @@
     options kvm ignore_msrs=1 report_ignored_msrs=0
   '';
   boot.kernelPackages = pkgs.linuxPackages_latest;
-
+  boot.kernelParams = [
+    "intel_iommu=on"
+    "iommu=pt"
+  ];
   networking = {
     hostName = hostname;
     nftables.enable = true;

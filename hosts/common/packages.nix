@@ -56,6 +56,7 @@ in
     ncdu
     nmap
     nvme-cli
+    pciutils
     powertop
     python3
     smartmontools

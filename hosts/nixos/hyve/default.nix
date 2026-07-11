@@ -49,14 +49,15 @@
     };
   };
 
+  services.tailscale = {
+    extraSetFlags = [ "--advertise-routes=10.0.3.0/24,192.168.64.0/24" "--advertise-exit-node" ];
+  };
+
   virtualisation.incus.preseed = {
     networks = [
       {
         config = {
-          "ipv4.address" = "192.168.64.254/24";
-          "ipv4.dhcp" = "true";
-          "ipv4.dhcp.ranges" = "192.168.64.1-192.168.64.249";
-          "ipv4.nat" = "true";
+          "ipv4.address" = "192.168.64.2/24";
         };
         name = "ixbr0";
         type = "bridge";

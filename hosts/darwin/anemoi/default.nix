@@ -13,6 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     bun
+    herdr
     kubecolor
     kubectl
     mas
@@ -27,7 +28,6 @@
       "incus"
     ];
     casks = [
-      "airbuddy"
       "discord"
       "helium-browser"
       "jordanbaird-ice"

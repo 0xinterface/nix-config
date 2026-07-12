@@ -18,4 +18,8 @@
       policy = ["magic"];
     };
   };
+
+  services.tailscale = {
+    extraSetFlags = [ "--advertise-routes=10.0.3.0/24" ];
+  };
 }

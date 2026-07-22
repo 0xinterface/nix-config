@@ -44,7 +44,7 @@
     masApps = {};
   };
 
-  programs.fish.shellAliases = {
-    discord = "concord";
-  };
+  programs.fish.interactiveShellInit = ''
+    alias discord concord
+  '';
 }

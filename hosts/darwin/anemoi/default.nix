@@ -13,9 +13,9 @@
 
   environment.systemPackages = with pkgs; [
     bun
-    herdr
     kubecolor
     kubectl
+    kubernetes-helm
     mas
     mosh
     nixd
@@ -26,10 +26,12 @@
   homebrew = {
     brews = [
       "incus"
+      "herdr"
+      "concord"
     ];
     casks = [
-      "discord"
       "helium-browser"
+      "google-chrome"
       "jordanbaird-ice"
       "little-snitch"
       "mullvad-vpn"

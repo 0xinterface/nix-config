@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, system, ... }:
 {
   ids.gids.nixbld = 350;
   system.defaults.dock = {
@@ -21,7 +21,7 @@
     nixd
     nil
     talosctl
-  ];
+  ] ++ [ inputs.herdr.packages.${system}.default ];
 
   homebrew = {
     brews = [

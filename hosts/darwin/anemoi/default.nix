@@ -26,8 +26,6 @@
   homebrew = {
     brews = [
       "incus"
-      "herdr"
-      "concord"
     ];
     casks = [
       "helium-browser"

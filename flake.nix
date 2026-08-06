@@ -16,6 +16,9 @@
     };
     deploy-rs.url = "github:serokell/deploy-rs";
 
+    herdr.url = "github:herdrdev/herdr/v0.8.0";
+    concord.url = "github:chojs23/concord";
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";

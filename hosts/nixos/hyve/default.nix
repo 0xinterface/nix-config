@@ -50,6 +50,7 @@
   };
 
   services.tailscale = {
+    useRoutingFeatures = "server";
     extraSetFlags = [ "--advertise-routes=10.0.3.0/24,192.168.64.0/24" "--advertise-exit-node" ];
   };
 

@@ -21,7 +21,10 @@
     nixd
     nil
     talosctl
-  ] ++ [ inputs.herdr.packages.${system}.default ];
+  ] ++ [ 
+    inputs.herdr.packages.${system}.default
+    inputs.concord.packages.${system}.default
+  ];
 
   homebrew = {
     brews = [

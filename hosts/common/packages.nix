@@ -50,6 +50,7 @@ in
     dig
     e2fsprogs # badblocks
     gptfdisk
+    ghostty.terminfo
     hddtemp
     htop
     molly-guard

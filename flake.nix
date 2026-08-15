@@ -51,6 +51,7 @@
         "oblivion"
       ];
       nixosHosts = [
+        "hemisferic"
         "hyve"
         "luna"
         "workstation"

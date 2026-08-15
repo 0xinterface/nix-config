@@ -2,6 +2,7 @@
 {
   users.users."${username}".extraGroups = ["incus-admin"];
   boot.initrd.kernelModules = [ "dm_thin_pool" "dm_snapshot" ];
+  services.lvm.boot.thin.enable = true;
   virtualisation = {
     incus = {
       enable = true;

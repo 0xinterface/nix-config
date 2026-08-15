@@ -53,6 +53,11 @@
         driver = "btrfs";
         config.source = "/var/lib/incus-storage";
       }
+      {
+        name = "vmpool";
+        driver = "lvm";
+        config.source = "vmpool";
+      }
     ];
     profiles = [
       {

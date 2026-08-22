@@ -16,6 +16,12 @@ in
       };
     };
     tailscale.enable = true;
+    resolved.enable = true;
+  };
+
+  systemd.services.tailscaled = {
+    after = [ "systemd-resolved.service" ];
+    wants = [ "systemd-resolved.service" ];
   };
 
   virtualisation = {

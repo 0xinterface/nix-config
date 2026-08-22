@@ -45,7 +45,7 @@ in
     lz4
     nodejs_22
     git
-  ] ++ lib.optionals stdenv.isLinux [
+  ] ++ lib.optionals stdenv.hostPlatform.isLinux [
     btrfs-progs
     dig
     e2fsprogs # badblocks
@@ -68,7 +68,7 @@ in
     lm_sensors
     iputils
     libuuid # `uuidgen` (already pre-installed on mac)
-  ] ++ lib.optionals stdenv.isDarwin [
+  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
     iproute2mac
   ];
 }

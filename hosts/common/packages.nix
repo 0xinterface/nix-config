@@ -17,7 +17,6 @@ in
     _1password-cli
     gnupg
     age
-    tmux
     just
     wget
     fish
@@ -61,7 +60,6 @@ in
     powertop
     python3
     smartmontools
-    tmux
     wget
     xfsprogs
     iotop

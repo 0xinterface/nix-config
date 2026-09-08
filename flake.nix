@@ -16,7 +16,7 @@
     };
     deploy-rs.url = "github:serokell/deploy-rs";
 
-    herdr.url = "github:herdrdev/herdr/v0.8.2";
+    herdr.url = "github:herdrdev/herdr/v0.9.0";
     concord.url = "github:chojs23/concord";
 
     disko = {

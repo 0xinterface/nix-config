@@ -42,7 +42,7 @@ in
     # compression
     zip
     lz4
-    nodejs_22
+    nodejs_24
     git
   ] ++ lib.optionals stdenv.hostPlatform.isLinux [
     btrfs-progs

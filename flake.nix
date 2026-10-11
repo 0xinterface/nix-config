@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    herdr.url = "github:herdrdev/herdr/v0.9.0";
+    herdr.url = "github:herdrdev/herdr/v0.9.3";
     concord.url = "github:chojs23/concord";
 
     disko = {

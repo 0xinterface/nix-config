@@ -32,7 +32,6 @@
     ];
     casks = [
       "helium-browser"
-      "google-chrome"
       "jordanbaird-ice"
       "little-snitch"
       "mullvad-vpn"

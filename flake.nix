@@ -1,7 +1,7 @@
 {
   inputs = {
     # rolling release
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # home manager
     home-manager = {

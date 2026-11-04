@@ -29,6 +29,7 @@
   homebrew = {
     brews = [
       "incus"
+      "consul-enterprise"
     ];
     casks = [
       "helium-browser"

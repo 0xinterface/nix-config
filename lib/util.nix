@@ -33,6 +33,7 @@
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-bundle" = homebrew-bundle;
+                "hashicorp/homebrew-tap" = homebrew-hashicorp;
             };
           };
         }

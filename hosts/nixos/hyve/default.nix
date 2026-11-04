@@ -20,6 +20,7 @@
     hostName = hostname;
     nftables.enable = true;
     useDHCP = true;
+    dhcpcd.denyInterfaces = [ "ens6f0" "eno1" ];
     nameservers = [
       "1.1.1.1"
       "8.8.8.8"

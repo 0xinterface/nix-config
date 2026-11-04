@@ -26,6 +26,8 @@
     inputs.concord.packages.${system}.default
   ];
 
+  environment.variables.CONSUL_HTTP_ADDR = "https://synapse.signal.ws";
+
   homebrew = {
     brews = [
       "incus"

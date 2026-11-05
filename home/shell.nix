@@ -9,10 +9,6 @@
       if test -d /Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data 
         set -x SSH_AUTH_SOCK /Users/admin/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
       end
-      if set -q CONSUL_HTTP_TOKEN_FILE
-        mkdir -p -m 700 (dirname $CONSUL_HTTP_TOKEN_FILE)
-        test -f $CONSUL_HTTP_TOKEN_FILE; and chmod 600 $CONSUL_HTTP_TOKEN_FILE
-      end
     '';
     interactiveShellInit = ''
       set fish_greeting

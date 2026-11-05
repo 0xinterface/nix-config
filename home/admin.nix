@@ -8,7 +8,7 @@
   home.stateVersion = "25.05";
 
   home.sessionVariables.CONSUL_HTTP_TOKEN_FILE =
-    if pkgs.stdenv.isDarwin
+    if pkgs.stdenv.hostPlatform.isDarwin
     then "${config.home.homeDirectory}/Library/Application Support/consul/token"
     else "\${XDG_RUNTIME_DIR}/consul/token";
 

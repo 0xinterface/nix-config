@@ -31,7 +31,12 @@ in
     onActivation.upgrade = true;
     onActivation.cleanup = "zap";
 
-    taps = builtins.attrNames config.nix-homebrew.taps;
+    taps = map
+      (name: {
+        inherit name;
+        trusted = !lib.hasPrefix "homebrew/" name;
+      })
+      (builtins.attrNames config.nix-homebrew.taps);
     
     casks = [
       "1password"

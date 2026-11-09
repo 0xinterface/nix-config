@@ -19,32 +19,39 @@
   networking = {
     hostName = hostname;
     nftables.enable = true;
-    useDHCP = true;
-    dhcpcd.denyInterfaces = [ "ens6f0" "eno1" ];
+    useDHCP = false;
     nameservers = [
       "1.1.1.1"
       "8.8.8.8"
     ];
+    bridges.ixbr0 = {
+      interfaces = [];
+    };
     interfaces.enp8s0.wakeOnLan = {
       enable = true;
       policy = ["magic"];
     };
+    interfaces.enp8s0.ipv4.addresses = [
+      {
+        address = "10.0.3.5";
+        prefixLength = 24;
+      }
+    ];
+    interfaces.ixbr0 = {
+      ipv4.addresses = [
+        {
+          address = "192.168.64.1";
+          prefixLength = 24;
+        }
+      ];
+    };
+    defaultGateway = "192.168.64.254";
     firewall = {
       trustedInterfaces = [ "ixbr0" ];
       interfaces.tailscale0 = {
         allowedTCPPorts = [
           22
           8443
-        ];
-      };
-      interfaces.ixbr0 = {
-        allowedTCPPorts = [
-          53
-          67
-        ];
-        allowedUDPPorts = [
-          53
-          67
         ];
       };
     };
@@ -56,15 +63,6 @@
   };
 
   virtualisation.incus.preseed = {
-    networks = [
-      {
-        config = {
-          "ipv4.address" = "192.168.64.2/24";
-        };
-        name = "ixbr0";
-        type = "bridge";
-      }
-    ];
     storage_pools = [
       {
         name = "standard";
@@ -87,7 +85,8 @@
         devices = {
           eth0 = {
             type = "nic";
-            network = "ixbr0";
+            nictype = "bridged";
+            parent = "ixbr0";
           };
           root = {
             type = "disk";

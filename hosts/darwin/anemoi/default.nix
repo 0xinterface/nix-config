@@ -17,7 +17,6 @@
     kubectl
     kubernetes-helm
     mas
-    mosh
     nixd
     nil
     talosctl
@@ -35,7 +34,6 @@
     ];
     casks = [
       "helium-browser"
-      "jordanbaird-ice"
       "little-snitch"
       "mullvad-vpn"
       "raycast"
